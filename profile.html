@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cá nhân</title>
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/fonts/icons/themify-icons/themify-icons.css">
+</head>
+<body>
+    <div id="profile_page">
+        <div class="header">
+            <div class="main_header">
+                <div class="header_logo">
+                    <a href="home.html">
+                        <img src="./assets/img/logoPng.png" alt="Pet Logo" class="header_logo_img">
+                    </a>
+                    
+                </div>
+
+                <div class="header_search">
+                    <div class="total_header_search">
+                        <input type="search" class="inp_header_search" placeholder="Tìm kiếm ...">
+                        <div class="btn_search">
+                            <i class="ti-search search_icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header_cart">
+                    <a href="cart.html" class="navto_cart">
+                        <i class="ti-shopping-cart-full cart_icon"></i>
+                    </a>
+                </div>
+
+                <div class="header_profile">
+                    <a href="profile.html" class="navto_profile">
+                        <i class="ti-user user_icon"></i>
+                        <p class="user_name"></p>
+                    </a>
+                </div>
+            </div>
+            <div class="nav_bar">
+                <div class="menu_item">
+                    <a href="#" class="main_menu navto_band">
+                        Nhãn hiệu
+                        <i class="ti-angle-down angle_down_icon"></i>
+                    </a>
+                    <div class="sub_menu">
+                        <a href="#" class="band_item">Classic</a>
+                        <a href="#" class="band_item">Fay</a>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <a href="#" class="main_menu navto_dog">
+                        Shop cún
+                        <i class="ti-angle-down angle_down_icon"></i>
+                    </a>
+                    <div class="sub_menu">
+                        <a href="#" class="dog_item">Thức ăn</a>
+                        <a href="#" class="dog_item">Quần áo</a>
+                        <a href="#" class="dog_item">Dụng cụ vệ sinh</a>
+                        <a href="#" class="dog_item">Y tế</a>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <a href="#" class="main_menu navto_cat">
+                        Shop mèo
+                        <i class="ti-angle-down angle_down_icon"></i>
+                    </a>
+                    <div class="sub_menu">
+                        <a href="#" class="cat_item">Thức ăn</a>
+                        <a href="#" class="cat_item">Quần áo</a>
+                        <a href="#" class="cat_item">Dụng cụ vệ sinh</a>
+                        <a href="#" class="cat_item">Y tế</a>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <a href="contact.html" class="navto_contact">
+                        Liên hệ
+                        <i class="ti-angle-down angle_down_icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile_content">
+            <div class="user_information">
+                <div class="user_picture">
+                    <img src="assets/img/user_png.png" alt="" class="user_pic">
+                    <a href="#" class="user_upload">
+                        <i class="ti-camera"></i>
+                    </a>
+                </div>
+                <div id="user_info">
+                    <div class="label_info">
+                        <div class="label_userInfo">
+                            Tên:
+                            <p id="user_name"></p>
+                        </div>
+                        <div class="label_userInfo">
+                            Điện thoại:
+                            <p id="user_phone"></p>
+                        </div>
+                        <div class="label_userInfo">
+                            Gmail:
+                            <p id="user_gmail"></p>
+                        </div>
+                        <div class="label_userInfo">
+                            Địa chỉ:
+                            <p id="user_address"></p>
+                        </div>    
+                    </div>
+                    
+                    <div class="btn_change_pass">
+                        <button class="change_pass">
+                            Đổi mật khẩu
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            <div class="buy_list">
+                
+            </div>
+        </div>
+
+        <div class="direct_messenger">
+            <a href="https://www.facebook.com/">
+                <img src="./assets/img/mess_icon.png" alt="Messenger icon" class="mess_icon">
+            </a>
+        </div>
+    </div>
+
+
+    <script>
+        const menuItems = document.querySelectorAll(".main_menu");
+
+        menuItems.forEach((menuItem) => {
+            menuItem.addEventListener('mouseover', () => {
+                const subMenu = menuItem.nextElementSibling;
+                subMenu.classList.toggle('sub_menu1');
+                menuItem.classList.toggle('click_color_active');
+            });
+
+            menuItem.addEventListener('mouseleave', () => {
+                // const subMenu = menuItem.nextElementSibling;
+                subMenu.classList.toggle('sub_menu1');
+                menuItem.classList.toggle('click_color_active');
+            });            
+        });
+        
+    </script>
+
+    <!-- Pull in the user's info -->
+    <script>
+        const userInfo = document.getElementById('user_info');
+        const userName = document.getElementById('user_name');
+        const userPhone = document.getElementById('user_phone');
+        const userGmail = document.getElementById('user_gmail');
+        const userAddress = document.getElementById('user_address');
+
+        const userData = {
+            name: "nick177",
+            phone: "086 999 8313",
+            gmail: "nick177@gmail.com",
+            address: "Nguyễn Trãi, Hà Đông, Hà Nội"
+        }
+
+        userName.textContent = userData.name;
+        userPhone.textContent = userData.phone;
+        userGmail.textContent = userData.gmail;
+        userAddress.textContent = userData.address;
+
+        const userHeaderName = document.getElementsByClassName('user_name');
+        userHeaderName[0].textContent = userData.name;
+    </script>
+</body>
+</html>

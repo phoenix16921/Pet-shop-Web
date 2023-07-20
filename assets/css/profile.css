@@ -1,0 +1,90 @@
+
+
+/***********************************************************************************************/
+/* PROFILE PAGE */
+#profile_page {
+    background-color: var(--background_color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    min-width: 700px;
+}
+
+.profile_content {
+    background-color: var(--content_color);
+    width: var(--content_width);
+    box-shadow: 5px 5px 5px var(--box_shadow);
+    margin-top: var(--content_margin_top);
+}
+
+.user_information {
+    display: flex;
+}
+
+.user_picture {
+    flex: 1;
+}
+
+.user_pic {
+    width: 100%;
+    padding: 20px;
+}
+
+.user_upload {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    color: var(--text_darker_color);
+}
+
+.user_upload:hover {
+    color: var(--text_login);
+}
+
+#user_info {
+    flex: 1;
+    padding: 15px;
+}
+
+.label_info {
+    height: 70%;
+}
+
+.label_userInfo{
+    font-size: 25px;
+    line-height: 2.5;
+    color: var(--text_login);
+}
+
+#user_name, #user_phone, #user_gmail, #user_address {
+    display: inline;
+}
+
+.btn_change_pass {
+    /* background-color: aquamarine; */
+    height: 30%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+}
+
+.change_pass {
+    padding: 10px;
+    font-size: var(--font_size);
+    background-color: var(--button_color);
+    color: white;
+    border: 1px solid var(--button_color);
+    box-shadow: 5px 5px 3px var(--box_shadow);
+    border-radius: var(--border_radius_sbox);
+}
+
+.change_pass:hover {
+    background-color: var(--hover_button_color);
+    cursor: pointer;
+}
+
+
+
+/***********************************************************************************************/

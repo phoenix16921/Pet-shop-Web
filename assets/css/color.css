@@ -1,0 +1,25 @@
+:root {
+    --background_color: #f8dae9;
+    --header_color: bisque;
+    --nav_color: #b9d6f3;
+    --hover_nav_color: #3b8cde;
+    --content_color: #f1e8d9;
+    --sub_menu_color: #e6e6e6;
+
+    --bg_inside_box: #fff;
+    --box_shadow: #ccc;
+    --text_login: #961d59;
+    --text_darker_color: #6b1440;
+
+    --button_color: #79d551;
+    --hover_button_color: #5a8e3a;
+
+    --font_size: 20px;
+    --sfont_size: 15px;
+    --border_radius_box: 20px;
+    --border_radius_sbox: 7px;
+    --margin_lr_box: 25px;
+    --content_width: 70%;
+    --content_margin_top: 160px;
+    --hover_color: #c12573;
+}

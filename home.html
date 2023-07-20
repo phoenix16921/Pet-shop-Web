@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/color.css">
+    <link rel="stylesheet" href="assets/fonts/icons/themify-icons/themify-icons.css">
+    <title>Trang chủ</title>
+    <link rel="icon" href="./assets/img/logoPng.png" type="image/x-icon">
+</head>
+<body>
+    <div id="home_page">
+        <div class="header">
+            <div class="main_header">
+                <div class="header_logo">
+                    <a href="home.html">
+                        <img src="./assets/img/logoPng.png" alt="Pet Logo" class="header_logo_img">
+                    </a>
+                    
+                </div>
+
+                <div class="header_search">
+                    <div class="total_header_search">
+                        <input type="search" class="inp_header_search" placeholder="Tìm kiếm ...">
+                        <div class="btn_search">
+                            <i class="ti-search search_icon"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header_cart">
+                    <a href="cart.html" class="navto_cart">
+                        <i class="ti-shopping-cart-full cart_icon"></i>
+                    </a>
+                </div>
+
+                <div class="header_profile">
+                    <a href="profile.html" class="navto_profile">
+                        <i class="ti-user user_icon"></i>
+                        <div class="user_name">nick177</div>
+                    </a>
+                </div>
+            </div>
+            <div class="nav_bar">
+                <div class="menu_item">
+                    <a href="#" class="main_menu navto_band">
+                        Nhãn hiệu
+                        <i class="ti-angle-down angle_down_icon"></i>
+                    </a>
+                    <div class="sub_menu">
+                        <a href="#" class="band_item">Classic</a>
+                        <a href="#" class="band_item">Fay</a>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <a href="#" class="main_menu navto_dog">
+                        Shop cún
+                        <i class="ti-angle-down angle_down_icon"></i>
+                    </a>
+                    <div class="sub_menu">
+                        <a href="#" class="dog_item">Thức ăn</a>
+                        <a href="#" class="dog_item">Quần áo</a>
+                        <a href="#" class="dog_item">Dụng cụ vệ sinh</a>
+                        <a href="#" class="dog_item">Y tế</a>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <a href="#" class="main_menu navto_cat">
+                        Shop mèo
+                        <i class="ti-angle-down angle_down_icon"></i>
+                    </a>
+                    <div class="sub_menu">
+                        <a href="#" class="cat_item">Thức ăn</a>
+                        <a href="#" class="cat_item">Quần áo</a>
+                        <a href="#" class="cat_item">Dụng cụ vệ sinh</a>
+                        <a href="#" class="cat_item">Y tế</a>
+                    </div>
+                </div>
+                <div class="menu_item">
+                    <a href="contact.html" class="navto_contact">
+                        Liên hệ
+                        <i class="ti-angle-down angle_down_icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home_content">
+            <img src="./assets/img/dog_cat.jpg" alt="Dog and Cat" class="dogcat_img">
+            <div class="article">
+                <h2 class="article_head">Dinh dưỡng cho chó mèo</h2>
+                <p>Dinh dưỡng là một phần quan trọng trong việc chăm sóc và nuôi dưỡng chó mèo của chúng ta. Đúng cách cung cấp dinh dưỡng cho chó mèo sẽ giúp chúng khỏe mạnh, có sức đề kháng tốt và có một cuộc sống hạnh phúc.</p>
+                <br>
+                <p>Thức ăn chất lượng là yếu tố cốt lõi để đảm bảo sức khỏe của chó mèo. Hãy chọn những thức ăn có thành phần tự nhiên, không chứa chất bảo quản và chất phụ gia có hại. Đồng thời, hãy chọn những thức ăn phù hợp với lứa tuổi, kích cỡ và hoạt động của chó mèo. Lượng thức ăn cung cấp cũng cần được điều chỉnh sao cho phù hợp, tránh tình trạng quá ăn hoặc thiếu ăn.</p>
+                <br>
+                <p>Đừng quên việc thăm khám và tư vấn với bác sĩ thú y định kỳ để đảm bảo sức khỏe tốt cho chó mèo của bạn. Bác sĩ thú y sẽ giúp bạn xác định chế độ ăn phù hợp và cung cấp các lời khuyên về dinh dưỡng.</p>
+            </div>
+        </div>
+
+        <div class="direct_messenger">
+            <a href="https://www.facebook.com/">
+                <img src="./assets/img/mess_icon.png" alt="Messenger icon" class="mess_icon">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        const menuItems = document.querySelectorAll(".main_menu");
+
+        menuItems.forEach((menuItem) => {
+            menuItem.addEventListener('mouseover', () => {
+                const subMenu = menuItem.nextElementSibling;
+                subMenu.classList.toggle('sub_menu1');
+                menuItem.classList.toggle('click_color_active');
+            });
+
+            menuItem.addEventListener('mouseleave', () => {
+                subMenu.classList.toggle('sub_menu1');
+                menuItem.classList.toggle('click_color_active');
+            });            
+        });
+        
+    </script>
+</body>
+</html>
