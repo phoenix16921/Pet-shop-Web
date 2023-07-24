@@ -5,7 +5,7 @@
 #profile_page {
     background-color: var(--background_color);
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
 
@@ -37,6 +37,7 @@
     font-size: 50px;
     text-align: center;
     color: var(--text_darker_color);
+    text-decoration: none;
 }
 
 .user_upload:hover {
@@ -63,7 +64,6 @@
 }
 
 .btn_change_pass {
-    /* background-color: aquamarine; */
     height: 30%;
     display: flex;
     align-items: flex-end;
@@ -88,3 +88,51 @@
 
 
 /***********************************************************************************************/
+
+/* BUY LIST TABLE */
+
+.buy_list {
+    margin-top: 100px;
+}
+
+.header_list {
+    margin: 35px 20px;
+    text-align: center;
+    text-shadow: 5px 5px 5px var(--box_shadow);
+    color: var(--text_login);
+}
+
+.tbl_buy_list, th, td {
+    /* border: 2px solid red; */
+}
+
+.tbl_buy_list {
+    width: 94%;
+    border-collapse: collapse;
+    margin: 50px 20px;
+    box-shadow: 5px 5px 5px var(--box_shadow);
+    background-color: var(--tbl_bg);
+    color: var(--text_darker_color);
+}
+
+tr:nth-child(even) {
+    background-color: aliceblue;
+}
+
+tr:hover {
+    background-color: var(--hover_nav_color);
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    height: 70px;
+    background-color: var(--tbl_th);
+}
+
+td {
+    height: 50px;
+    text-align: center;
+}

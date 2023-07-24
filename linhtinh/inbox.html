@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+
+    <style>
+        table, th, tr, td {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="/create">Create Message</a>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>From</th>
+            <th>At</th>
+            <th>Seen</th>
+        </tr>
+        <c:forEach items="${messages}" var="message">
+            <tr>
+                <td>
+                    <a href="/Message?id=${message.id}">${message.title}</a>
+                </td>
+                <td>
+                    ${message.from}
+                </td>
+                <td>
+                    ${message.at}
+                </td>
+                <td>
+                    ${message.idRead}
+                </td>
+            </tr>
+        </c:forEach>
+        
+    </table>
+    
+</body>
+</html>
